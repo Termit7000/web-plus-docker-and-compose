@@ -18,8 +18,4 @@ EXPOSE 4000
 
 
 CMD [ "pm2-runtime", "start", "ecosystem.config.js" ]
-
-
-
-
-    
+   

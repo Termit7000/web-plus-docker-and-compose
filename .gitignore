@@ -2,3 +2,4 @@
 
 # DB Data
 /data
+.env*

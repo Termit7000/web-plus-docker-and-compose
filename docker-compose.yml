@@ -1,5 +1,18 @@
 version: "3.9"
 services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "0.1G"
+
   backend:
     container_name: backend
     build: 
@@ -10,7 +23,12 @@ services:
     depends_on:
       - "database"
     links:
-      - "database:db"
+      - "database:db"    
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "1G"
     networks:
       - "backend"
 
