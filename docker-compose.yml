@@ -27,8 +27,6 @@ services:
     image: postgres:12-alpine
     env_file:
       - ./backend/.env
-    volumes:
-      - /home/termit/pgdata:/var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
     restart: unless-stopped
