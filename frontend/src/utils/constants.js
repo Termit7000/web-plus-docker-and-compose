@@ -1,4 +1,4 @@
-export const URL = 'http://api.termit.nomoredomainsclub.ru' ; //"http://127.0.0.1:4000";
+export const URL =  `${window.location.protocol}//api.termit.nomoredomainsclub.ru` ;
 
 export const MINIMUM_PASSWORD_LENGTH = 3;
 export const MINIMUM_USERNAME_LENGTH = 3;
