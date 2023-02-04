@@ -3,3 +3,4 @@
 # DB Data
 /data
 .env*
+/node_modules
