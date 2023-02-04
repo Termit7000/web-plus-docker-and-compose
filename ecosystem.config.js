@@ -14,7 +14,8 @@ module.exports = {
       host: DEPLOY_HOST,
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
-      path: DEPLOY_PATH,     
+      path: DEPLOY_PATH,
+      'post-deploy': 'docker-compose up --build',     
     },
   },
 };
