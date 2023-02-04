@@ -2,5 +2,5 @@
 
 # DB Data
 /data
-.env*
+.env
 /node_modules
