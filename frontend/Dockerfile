@@ -7,8 +7,8 @@ RUN npm run build && \
     rm -rf ./src
 
 FROM nginx:1.16.0-alpine As production
+COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d/
 COPY --from=builder /app/build /usr/share/nginx/html
-COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d
 
 EXPOSE 8081
 
