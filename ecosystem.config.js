@@ -1,5 +1,5 @@
 
-require('dotenv').config({ path: '.env.deploy' });
+require('dotenv').config();
 
 const {
   DEPLOY_USER, DEPLOY_HOST, DEPLOY_REF, DEPLOY_REPO, DEPLOY_PATH,
@@ -14,8 +14,7 @@ module.exports = {
       host: DEPLOY_HOST,
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
-      path: DEPLOY_PATH,
-      'post-deploy': 'docker-compose up --build',
+      path: DEPLOY_PATH,     
     },
   },
 };
