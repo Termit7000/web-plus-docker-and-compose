@@ -1,6 +1,6 @@
 FROM node:16-alpine As builder
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 RUN npm ci --no-audit
 COPY . ./
 RUN npm run build && \
