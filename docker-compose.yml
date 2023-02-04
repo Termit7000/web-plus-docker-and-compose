@@ -38,7 +38,7 @@ services:
     env_file:
       - ./backend/.env
     volumes:
-      - ./data:/var/lib/postgresql/data/pgdata
+      - /pgdata:/var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
     restart: unless-stopped
