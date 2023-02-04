@@ -7,11 +7,6 @@ services:
     restart: unless-stopped
     ports:
       - "8081:80"
-    deploy:
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "0.1G"
 
   backend:
     container_name: backend
@@ -24,11 +19,6 @@ services:
       - "database"
     links:
       - "database:db"    
-    deploy:
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "1G"
     networks:
       - "backend"
 
@@ -38,15 +28,10 @@ services:
     env_file:
       - ./backend/.env
     volumes:
-      - /pgdata:/var/lib/postgresql/data/pgdata
+      - /home/termit/pgdata:/var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
     restart: unless-stopped
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "1G"
     networks:
       - "backend"
 
