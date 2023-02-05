@@ -15,7 +15,7 @@ export class WishByIdPipePipe implements PipeTransform {
     }
 
     const wish = await this.wishService.findOne({
-      where: { id, offers: { hidden: false } },
+      where: { id },
       relations: ['owner', 'offers', 'offers.user'],
     });
     if (!wish) {

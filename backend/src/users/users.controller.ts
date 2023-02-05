@@ -89,7 +89,7 @@ export class UserController {
   @UseGuards(JwtAuthGuard)
   getOwnWishes(@Req() req) {
     return this.wishService.findMany({
-      where: { owner: { id: req.user.id }, offers: { hidden: false } },
+      where: { owner: { id: req.user.id } },
       relations: ['owner', 'offers', 'offers.user'],
     });
   }
