@@ -50,10 +50,6 @@ export class WishlistsController {
       },
     });
 
-    if (!items.length) {
-      throw new BadRequestException('Не найдено подходящих хотелок');
-    }
-
     return this.wishlistsService.create(req.user, createWishlistDto, items);
   }
 

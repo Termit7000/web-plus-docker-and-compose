@@ -1,4 +1,4 @@
-export const URL =  `${window.location.protocol}//api.termit.nomoredomainsclub.ru` ;
+export const URL = (process.env.NODE_ENV === 'development') ? 'http://localhost:4000' : `${window.location.protocol}//api.termit.nomoredomainsclub.ru` ;
 
 export const MINIMUM_PASSWORD_LENGTH = 3;
 export const MINIMUM_USERNAME_LENGTH = 3;

@@ -28,6 +28,7 @@ export class WishesService {
   }
 
   findOne(query: FindOneOptions<Wish>) {
+    console.log(query);
     return this.wishRepository.findOne(query);
   }
 

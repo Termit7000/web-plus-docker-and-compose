@@ -20,6 +20,6 @@ async function bootstrap() {
   await app.listen(port);
 
   console.log('listened at: ', port);
-  console.log('HOST: ', POSTGRES_HOST);
+  console.log('DB HOST: ', POSTGRES_HOST);
 }
 bootstrap();
